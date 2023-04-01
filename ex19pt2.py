@@ -25,9 +25,9 @@ chicken_masala(amount_chicken + 10, amount_masala + 12)
 # Ask for user input
 print("Input the varibales --> ")
 print("This is the amount of chicken:")
-chicken_amount = input(int)
+chicken_amount = float(input())
 print("This is the amount of masala:")
-masala_amount = input(int)  
+masala_amount = float(input())  
 
 chicken_masala(chicken_amount, masala_amount)
 
