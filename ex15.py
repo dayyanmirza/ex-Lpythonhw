@@ -12,7 +12,7 @@ txt = open(filename)
 # Prints out the file that was inputted in argv.
 print(f"Here's your file {filename}:")
 # reads the file without parameters.
-print(txt.read())
+print(txt.readline())
 txt.close()
 
 # Asks you to type filename again. And file_again variable asks for input.
