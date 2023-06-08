@@ -1,0 +1,13 @@
+Game: Adventure Game -  Mirage based in the desert.   
+
+Make the code in small chunks and not in one go so that you can code and then easily fix any errrors easily as the error will be with the implemented functionality.
+
+Tasks:
+- Make the various locations:
+    - Start
+    - Red door
+    - Blue door
+    - River
+    - Boat 
+    - Village 
+- Incorporate the various decisions people have to make in each location. 

@@ -23,18 +23,29 @@ def bear_room():
     print("How are you going to move the bear?")        
     bear_moved = False
 
-    while True:
+    # for the while loop below basically the choice condition has to be met i.e. taunt bear in order to then test the booleans statement i.e. and not bear_moved etc.
+    # Those are the conditions for the if statments.
+    # In general if bear_moved = False the only way the if statement will run is if --> and not bear_moved is used.
+    # If bear_moved = True the only way the if statement will run is if --> and bear_moved is used.
+    # The and not bear_moved doesn't actually change the value of bear moved, it's just testing if its false, if it isn't then the if/elif statement can't run.
+    # The and bear_moved doesn't actually change the value of bear moved, it's just testing if its true, if it isn't then the if/elif statement can't run. 
+
+    while True: # makes an infinite loop.
         choice = input("> ")
-    
-        if choice == "take honey":
+                                     
+        if choice == "take honey":          # https://stackoverflow.com/questions/26069605/learn-python-the-hard-way-exercise-35-boolean-expression
+            # print(bear_moved) # bear moved is False
             dead("The bear looks at you then slaps your face off.")
-        elif choice == "taunt bear" and not bear_moved:
+        elif choice == "taunt bear" and not bear_moved: # test succeeds as bear_moved = False so you use not to invert the test i.e. and not bear_moved.
+            # print(bear_moved) # bear moved is False 
             print("The bear has moved from the door.")
             print("You can go through it now.")     
-            bear_moved = True 
-        elif choice == "taunt bear" and not bear_moved:
+            bear_moved = True # once you type 'taunt bear' the bear_moved becomes true therefore the two elif statements below can be used.
+        elif choice == "taunt bear" and bear_moved: # test succeeds as bear_moved = True so you don't need to invert the test so you would use i.e. and bear_moved.
+            # print(bear_moved) # bear_moved is True  
             dead("The bear gets pissed off and chews your leg off.")
         elif choice == "open door" and bear_moved:
+            # print(bear_moved) # bear moved is True 
             gold_room()
         else:
             print("I got no idea what that means.")           
