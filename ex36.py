@@ -146,7 +146,7 @@ def blue_door():
             start()        
         else:
             print("Sorry, that's not an option.")    
-      
+        
            
 
 # create the die function.
