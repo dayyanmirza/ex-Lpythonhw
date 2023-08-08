@@ -2,7 +2,7 @@
 class Animal(object):
 
     def __init__(self, name):
-        ## Cat has-a name
+        ## Animal has-a name
         self.name = name
 
 ## Dog is-a Animal
