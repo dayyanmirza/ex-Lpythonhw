@@ -221,10 +221,13 @@ a_game.play()
 Study Drill Notes:
 
 Finite State Machines:
-- 
 
-
-
-
+# Resources:
+- https://en.wikipedia.org/wiki/Finite-state_machine
+- https://www.youtube.com/watch?v=9YnjgXmv6fU
+- https://medium.com/@mlbors/what-is-a-finite-state-machine-6d8dec727e2c
+    - A finite state machine:
+        - Is a model of computation, based on a hypothetical machine made of one or more states, fixed set of states.
+        - Can only be in one state at any point in time, meaning the machine must transition from one state to another to perform different actions.
 
 """
