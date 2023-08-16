@@ -13,26 +13,43 @@ class Parent(object):
 
 class Child(Parent):
 
-    def override(self):
-        print("CHILD override()")
+    def override(self): # override function in the Child, if called, overrides the override function of the Parent.
+        print("CHILD override()") 
 
-    def altered(self):
-        print("CHILD, BEFORE PARENT altered()")
-        super(Child, self).altered()
+    def altered(self): # altered function in Child overrides the one in the parent.
+        print("CHILD, BEFORE PARENT altered()") 
+        super(Child, self).altered() # runs the Parent altered function  
         print("CHILD, AFTER PARENT altered()")
 
 
 dad = Parent()
 son = Child()
 
-dad.implicit()
-son.implicit()
+dad.implicit() # implicit function of Parent runs 
+son.implicit() # implicit function of Parent runs as Child doesn't have a implicit function
 
-dad.override()
-son.override()
+dad.override() # Parent override function runs
+son.override() # Child override fucntion runs 
 
-dad.altered()
-son.altered()
+dad.altered() # Parent alterered function runs 
+son.altered() # Child altered function runs
 
 
-## Write a comment on on each line of this code, explaining what the line does and saying whether it's override or not
+"""
+
+Using super() with __init__:
+
+The most common use of super() is actually in __init__ functions in base classes. 
+This is usually the only place where you need to do some things in a child, then complete the initialization in the parent. 
+Here's a quick example of doing that in the Child:
+
+i.e.
+
+class Child(Parent):
+def __init__ (self, stuff):
+    self.stuff = stuff
+    super(Child, self).__init__()
+
+This is pretty much the same as the Child.altered example above, except I'm setting some variables in the __init__ before having the Parent initialize with its Parent.__init__.”
+
+"""
