@@ -1,43 +1,44 @@
-# Composition:
-class Other(object):
+# # Composition:
 
-    def override(self):
-        print("OTHER override()")
+# class Other(object):
 
-    def implicit(self):
-        print("OTHER implicit()")
+#     def override(self):
+#         print("OTHER override()")
 
-    def altered(self):
-        print("OTHER altered()")
+#     def implicit(self):
+#         print("OTHER implicit()")
 
-class Child(object):
+#     def altered(self):
+#         print("OTHER altered()")
 
-    def __init__(self):
-        self.other = Other() # creates an instance of the Other() class --> assigned to the self.other attribute
+# class Child(object):
 
-    def implicit(self):
-        self.other.implicit() # used to access the Other class implicit function. 
+#     def __init__(self):
+#         self.other = Other() # creates an instance of the Other() class --> assigned to the self.other attribute
 
-    def override(self):
-        print("CHILD override()")
+#     def implicit(self):
+#         self.other.implicit() # used to access the Other class implicit function. 
 
-    def altered(self):
-        print("CHILD, BEFORE OTHER altered()")
-        self.other.altered() # used to access the Other class altered function
-        print("CHILD, AFTER OTHER altered()")
+#     def override(self):
+#         print("CHILD override()")
 
-son = Child()
+#     def altered(self):
+#         print("CHILD, BEFORE OTHER altered()")
+#         self.other.altered() # used to access the Other class altered function
+#         print("CHILD, AFTER OTHER altered()")
 
-son.implicit()
-son.override()
-son.altered()
+# son = Child()
+
+# son.implicit()
+# son.override()
+# son.altered()
 
 """
 Study Drills:
 
 https://peps.python.org/pep-0008/
 
-- Read the above and try applying it to your code.
+- Read the above and try applying it to your code. 
 
 """      
-   
+  
